@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>T Odos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Contents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @t_odos.each do |t_odo| %>
+      <tr>
+        <td><%= t_odo.title %></td>
+        <td><%= t_odo.contents %></td>
+        <td><%= link_to 'Show', t_odo %></td>
+        <td><%= link_to 'Edit', edit_t_odo_path(t_odo) %></td>
+        <td><%= link_to 'Destroy', t_odo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p class="text-primary">333</p>
+<p class="bg-primary">333</p>
+<p class="title">jquery</p>
+<br>
+
+<%= link_to 'New T Odo', new_t_odo_path %>

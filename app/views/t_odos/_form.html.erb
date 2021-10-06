@@ -1,0 +1,27 @@
+<%= form_with(model: t_odo, local: true) do |form| %>
+  <% if t_odo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(t_odo.errors.count, "error") %> prohibited this t_odo from being saved:</h2>
+
+      <ul>
+      <% t_odo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contents %>
+    <%= form.text_field :contents %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

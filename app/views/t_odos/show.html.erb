@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @t_odo.title %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @t_odo.contents %>
+</p>
+
+<%= link_to 'Edit', edit_t_odo_path(@t_odo) %> |
+<%= link_to 'Back', t_odos_path %>
